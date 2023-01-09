@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function onOver(elemento){
+            elemento.style.backgroundColor = "red";
+            elemento.style.color = "white";
+            elemento.style.fontfamily = "monospace";
+            elemento.style.fontSize = "15px"
+        }
+        function onOut(elemento){
+            elemento.style.backgroundColor = "rgb(255, 0, 128)";
+            elemento.style.color = "black"
+            elemento.style.fontSize = "25px"
+        }
+        function onClick(elemento){
+            elemento.style.backgroundColor = "rgb(255, 170, 0)";
+            elemento.style.color = "black"
+            elemento.style.fontSize = "20px"
+        }
+        function onDbclick(elemento){
+            elemento.style.backgroundColor = "blue";
+            elemento.style.color = "white"
+            elemento.style.fontSize = "10px"
+        }
+        function loader(){
+            let t = document.getElementById("teste")
+            t.onclick = mudartext;
+        }
+
+        function mudartext(){
+            this.innerHTML = "Novo Texto";
+        }
+
+    </script>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            padding:5px;
+            background-color: blue;
+            color: white;
+            display:inline-block;
+            text-align:center;
+            border-radius:5px;
+            font-size: 10px;
+        }
+        h1{
+            margin: none;
+            padding: none;
+
+        }
+
+    </style>
+</head>
+<body onload="Loader()">
+
+    <div onmouseover="onOver(this)"
+    onmouseout="onOut(this)"
+    onclick="onClick(this)"
+    ondblclick="onDbclick(this)"
+    >
+    <h1 id="teste" >teste</h1>
+
+    </div>
+
+</body>
+</html>
